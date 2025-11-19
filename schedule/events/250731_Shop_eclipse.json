@@ -1,0 +1,13 @@
+{
+  "title": "비치 바캉스",
+  "character": "이클립스",
+  "start": "2025-07-31",
+  "end": "2025-08-14",
+  "line_index": 3,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "powder"
+}

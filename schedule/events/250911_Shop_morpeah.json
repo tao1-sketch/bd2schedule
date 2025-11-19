@@ -1,0 +1,13 @@
+{
+  "title": "비치 바캉스",
+  "character": "모르페아",
+  "start": "2025-09-11",
+  "end": "2025-09-25",
+  "line_index": 1,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "powder"
+}

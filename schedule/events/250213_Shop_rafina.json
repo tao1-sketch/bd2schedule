@@ -1,0 +1,13 @@
+{
+  "title": "게임부",
+  "character": "라피나",
+  "start": "2025-02-13",
+  "end": "2025-03-13",
+  "line_index": 7,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "mirror"
+}

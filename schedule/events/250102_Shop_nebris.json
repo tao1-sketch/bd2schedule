@@ -1,0 +1,13 @@
+{
+  "title": "신입사원",
+  "character": "네브리스",
+  "start": "2025-01-02",
+  "end": "2025-01-16",
+  "line_index": 1,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "powder"
+}

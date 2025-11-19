@@ -1,0 +1,12 @@
+{
+    "title": "새하얀 축복",
+    "character" : "레피테아",
+    "start": "2025-11-13",
+    "end": "2025-11-27",
+    "line_index": 2,
+    "group": 1,
+    "background_img": "wedding_refi.png",
+    "link": "https://example.com/meeting",
+    "limited": false,
+    "rerun": true
+  }

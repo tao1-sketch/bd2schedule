@@ -1,0 +1,13 @@
+{
+  "title": "강철엔진",
+  "character": "라피나",
+  "start": "2023-12-06",
+  "end": "2023-12-20",
+  "line_index": 8,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "pass"
+}

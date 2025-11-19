@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Schedule</title>
+<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="/style.css?v=1">
+</head>
+
+<body>
+
+<div id="nav-container"></div>
+
+<div id="main-view">
+  <div class="bg"></div>
+</div>
+
+<script src="app.js?v=1"></script>
+
+<script>
+fetch("/nav.html?v=" + Date.now())
+  .then(res => res.text())
+  .then(html => {
+      document.getElementById("nav-container").innerHTML = html;
+
+      const current = document.querySelector("[data-tab='schedule']");
+      if (current) current.classList.add("active");
+
+      document.querySelector("[data-tab='home']").onclick = () => location.href = "/index.html";
+      document.querySelector("[data-tab='schedule']").onclick = () => location.href = "/schedule/index.html";
+      document.querySelector("[data-tab='notice']").onclick = () => alert("공지 페이지 준비중");
+      document.querySelector("[data-tab='config']").onclick = () => alert("설정 페이지 준비중");
+
+      const sidebar = document.querySelector("#nav-container #sidebar");
+      if (sidebar) {
+          const filterBox = document.createElement("div");
+          filterBox.id = "date-filter";
+          filterBox.innerHTML = `
+            <h3>기간 필터</h3>
+            <input type="date" id="filter-start">
+            <input type="date" id="filter-end">
+            <button id="filter-apply">적용</button>
+            <button id="filter-reset">전체보기</button>
+          `;
+          sidebar.appendChild(filterBox);
+
+          const startInput = filterBox.querySelector("#filter-start");
+          const endInput = filterBox.querySelector("#filter-end");
+          const applyBtn = filterBox.querySelector("#filter-apply");
+          const resetBtn = filterBox.querySelector("#filter-reset");
+          /*window._updateDateFilterInputs = function () {
+              if (!window.currentFilter) return;
+              if (window.currentFilter.start) {
+                  startInput.value = window.currentFilter.start; // "YYYY-MM-DD"
+              }
+              if (window.currentFilter.end) {
+                  endInput.value = window.currentFilter.end;
+              }
+          };*/
+
+      // 혹시 currentFilter가 이미 준비돼 있다면, 지금 바로 한 번 반영
+      //window._updateDateFilterInputs();
+          applyBtn.onclick = () => {
+              if (window.setDateFilter) {
+                  window.setDateFilter(startInput.value, endInput.value);
+              }
+          };
+          resetBtn.onclick = () => {
+              startInput.value = "";
+              endInput.value = "";
+              if (window.setDateFilter) {
+                  window.setDateFilter(null, null);
+              }
+          };
+          const cf = window.currentFilter;
+          if (cf) {
+            startInput.value = cf.start;
+            endInput.value = cf.end;
+          }
+      }
+  });
+</script>
+
+
+</body>
+</html>

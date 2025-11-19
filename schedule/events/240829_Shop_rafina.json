@@ -1,0 +1,13 @@
+{
+  "title": "게임부",
+  "character": "라피나",
+  "start": "2024-08-29",
+  "end": "2024-09-12",
+  "line_index": 1,
+  "group": 2,
+  "background_img": "",
+  "link": "https://example.com/shoot",
+  "limited": false,
+  "rerun": false,
+  "contents": "powder"
+}

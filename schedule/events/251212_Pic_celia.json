@@ -1,0 +1,12 @@
+ {
+    "title": "마스커레이드 바니",
+    "character" : "셀리아",
+    "start": "2025-12-11",
+    "end": "2025-12-25",
+    "line_index": 2,
+    "group": 1,
+    "background_img": "bunny_celia.png",
+    "link": "https://example.com/meeting",
+    "limited": true,
+    "rerun": true
+  }

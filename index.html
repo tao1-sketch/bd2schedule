@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<div id="nav-container"></div>
+
+<div id="main-view">
+    <div class="bg"></div>
+    <h2>홈</h2>
+    <p>여기는 홈 화면입니다.</p>
+</div>
+
+<script>
+    fetch("/nav.html?v=" + Date.now())
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("nav-container").innerHTML = html;
+            const current = document.querySelector("[data-tab='home']");
+            if (current) current.classList.add("active");
+            document.querySelector("[data-tab='home']").onclick = () => location.href = "/index.html";
+            document.querySelector("[data-tab='schedule']").onclick = () => location.href = "/schedule/index.html";
+            document.querySelector("[data-tab='notice']").onclick = () => alert("공지 페이지 준비중");
+            document.querySelector("[data-tab='config']").onclick = () => alert("설정 페이지 준비중");
+        });
+</script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

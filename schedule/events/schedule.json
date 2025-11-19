@@ -1,0 +1,26 @@
+[
+  {
+    "title": "PVE",
+    "character" : "",
+    "start": "2025-11-21",
+    "end": "2025-12-20",
+    "line_index": 1,
+    "group": 3,
+    "background_img": "bunny_roen.png",
+    "link": "",
+    "limited": false,
+    "rerun": true
+  },
+  {
+    "title": "PVP",
+    "character" : "",
+    "start": "2025-11-21",
+    "end": "2025-12-20",
+    "line_index": 1,
+    "group": 4,
+    "background_img": "bunny_roen.png",
+    "link": "",
+    "limited": false,
+    "rerun": true
+  }
+]
