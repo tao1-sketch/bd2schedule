@@ -355,11 +355,6 @@ function renderScheduler(scheduleData, dirName) {
     const gridWidth = grid.scrollWidth;
     wrapper.style.width = gridWidth + "px";
 }
-/* ============================
-   모달 보조 함수들
-============================ */
-
-// 텍스트 안전하게 표시용
 function escapeHtml(str) {
     if (str === undefined || str === null) return "";
     return String(str)
@@ -370,7 +365,6 @@ function escapeHtml(str) {
         .replace(/'/g, "&#039;");
 }
 
-// 모달 DOM이 없으면 생성, 있으면 재사용
 function ensureScheduleModal() {
     let overlay = document.getElementById("schedule-modal-overlay");
     if (overlay) return overlay;
