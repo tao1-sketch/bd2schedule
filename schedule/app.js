@@ -352,6 +352,8 @@ function renderScheduler(scheduleData, dirName) {
         const extra = mt + mb;
         block.style.height = (length * rowHeight - extra) + "px";
     });
+    const gridWidth = grid.scrollWidth;
+    wrapper.style.width = gridWidth + "px";
 }
 /* ============================
    모달 보조 함수들
