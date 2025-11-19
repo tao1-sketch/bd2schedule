@@ -26,8 +26,8 @@ fetch("../nav.html?v=" + Date.now())
       const current = document.querySelector("[data-tab='schedule']");
       if (current) current.classList.add("active");
 
-      document.querySelector("[data-tab='home']").onclick = () => location.href = "/index.html";
-      document.querySelector("[data-tab='schedule']").onclick = () => location.href = "/schedule/index.html";
+      document.querySelector("[data-tab='home']").onclick = () => location.href = "../index.html";
+      document.querySelector("[data-tab='schedule']").onclick = () => location.href = "./index.html";
       document.querySelector("[data-tab='notice']").onclick = () => alert("공지 페이지 준비중");
       document.querySelector("[data-tab='config']").onclick = () => alert("설정 페이지 준비중");
 
