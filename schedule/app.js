@@ -33,7 +33,6 @@ function loadAllSchedules() {
                 `;
                 return;
             }
-
             const promises = list.map(name =>
                 fetch(`events/${name}?v=${Date.now()}`)
                     .then(r => {
@@ -41,7 +40,6 @@ function loadAllSchedules() {
                         return r.json();
                     })
             );
-
             return Promise.all(promises).then(allArrays => {
                 allScheduleData = allArrays.flat().map((item, idx) => ({
                     ...item,
@@ -411,7 +409,8 @@ function openScheduleModal(globalId) {
         { key: "",        label: "픽업" },
         { key: "powder",  label: "희망의 가루 상점" },
         { key: "golden",  label: "황금의 실 상점" },
-        { key: "mirror",  label: "거울전쟁 상점" }
+        { key: "mirror",  label: "거울전쟁 상점" },
+        { key: "pass",  label: "캐릭터 패스" }
     ];
 
     let hasAny = false;
@@ -421,7 +420,7 @@ function openScheduleModal(globalId) {
         if (!list.length) return;
         hasAny = true;
         let tbimg = "";
-        if (key == ""){tbimg = "group_1";} else if(key == "powder"){tbimg="powder";}else if(key == "golden"){tbimg="goldensilk";}else if(key == "mirror"){tbimg="mirrormedal";}
+        if (key == ""){tbimg = "group_1";} else if(key == "powder"){tbimg="powder";}else if(key == "golden"){tbimg="goldensilk";}else if(key == "mirror"){tbimg="mirrormedal";}else if(key == "pass"){tbimg="passticket";}
         html += `<div style="display: flex; justify-content: center; align-items: center;"><img src="source/${tbimg}.png?v=${Date.now()}" width="30px" height="30px" style="padding: 0 10px 0 0;">`;
         html += `<h2 style="padding: 0 10px 0 0;">${escapeHtml(label)}</h3></div>`;
         html += `
